@@ -1,0 +1,27 @@
+group 'ahcos'
+version '0.0.1'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+sourceCompatibility = 1.10
+
+mainClassName = "core.AOTMain"
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.1stleg:jnativehook:2.0.2'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['com/']
+        }
+        resources {
+            srcDirs = ['resources/']
+        }
+    }
+}
